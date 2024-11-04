@@ -15,37 +15,49 @@ const Navbar = () => {
     <div className="flex lg:flex-row md:flex-col flex-col gap-6">
       <NavLink
         to="/"
-        className={({ isActive }) => (isActive ? "text-yellow-500" : "text-white")}
+        className={({ isActive }) =>
+          isActive ? "text-yellow-500" : "text-white"
+        }
       >
         Home
       </NavLink>
       <NavLink
         to="/about"
-        className={({ isActive }) => (isActive ? "text-yellow-500" : "text-white")}
+        className={({ isActive }) =>
+          isActive ? "text-yellow-500" : "text-white"
+        }
       >
         About
       </NavLink>
       <NavLink
         to="/portfolio"
-        className={({ isActive }) => (isActive ? "text-yellow-500" : "text-white")}
+        className={({ isActive }) =>
+          isActive ? "text-yellow-500" : "text-white"
+        }
       >
         Portfolio
       </NavLink>
       <NavLink
         to="/clients"
-        className={({ isActive }) => (isActive ? "text-yellow-500" : "text-white")}
+        className={({ isActive }) =>
+          isActive ? "text-yellow-500" : "text-white"
+        }
       >
         Clients
       </NavLink>
       <NavLink
         to="/blog"
-        className={({ isActive }) => (isActive ? "text-yellow-500" : "text-white")}
+        className={({ isActive }) =>
+          isActive ? "text-yellow-500" : "text-white"
+        }
       >
         Blog
       </NavLink>
       <NavLink
         to="/contact"
-        className={({ isActive }) => (isActive ? "text-yellow-500" : "text-white")}
+        className={({ isActive }) =>
+          isActive ? "text-yellow-500" : "text-white"
+        }
       >
         Contact
       </NavLink>
@@ -67,7 +79,7 @@ const Navbar = () => {
 
       {/* Button */}
       <button className="btn btn-sm text-xs font-bold bg-[#FEBF00] hover:bg-[#FEBF00] uppercase rounded-none border-none ml-4 px-4 py-2 lg:block hidden">
-      Book a table
+        Book a table
       </button>
 
       {/* Mobile Menu Button */}
@@ -79,11 +91,11 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-20 right-0 w-1/2 bg-gray-800 text-white lg:hidden z-50"> 
+        <div className="absolute top-20 right-0 md:w-1/2 w-3/5 bg-gray-800 text-white lg:hidden z-50">
           <div className="flex flex-col p-4 space-y-3">
             {navLinks}
             <button className="btn lg:btn-md md:btn-md text-xs font-bold bg-[#FEBF00] hover:bg-[#FEBF00] uppercase rounded-none border-none  md:px-4 px-0 md:py-2 py-0 w-full outline-none">
-            Book a table
+              Book a table
             </button>
           </div>
         </div>
