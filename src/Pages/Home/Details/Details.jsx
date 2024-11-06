@@ -9,7 +9,7 @@ const Details = () => {
   const defaultTabClass = "px-4 py-2";
 
   return (
-    <div>
+    <div id="about">
       <div className="mt-20 px-4 xl:px-28 lg:px-10 flex flex-col md:flex-row justify-center gap-10">
         {/* Left Side: Image */}
         <div className="w-full md:w-1/2 flex justify-center">
@@ -154,7 +154,7 @@ const Details = () => {
         </div>
       </div>
 
-      <div className="relative">
+      <div className="relative">  
        
         <img className="absolute right-0 -bottom-20 xl:h-64 lg:h-48 lg:block md:hidden hidden" src="/images/details2.png" alt="" />
       </div>

@@ -4,7 +4,7 @@ import flowerImg from "/images/Vector.png";
 
 const Banner = () => {
   return (
-    <div
+    <div id="home"
       className="relative  bg-repeat h-[780px] md:h-[600px] lg:h-[700px] xl:h-[800px] "
       style={{
         backgroundImage: `url(${bannerBg})`,

@@ -1,0 +1,41 @@
+[
+    {
+      "id": 1,
+      "name": "Vegetables Burger",
+      "img": "https://i.ibb.co/ZKWg31R/burger.png",
+      "details": "Fresh vegetable burger"
+    },
+    {
+      "id": 2,
+      "name": "Barbecue Italian Cuisine Pizza",
+      "img": "https://i.ibb.co/NNJJ846/pizza.png",
+      "details": "Smoky Italian pizza"
+    },
+    {
+      "id": 3,
+      "name": "Spacial Pizza",
+      "img": "https://i.ibb.co/NNJJ846/pizza.png",
+      "details": "Chef's special pizza"
+    },
+    {
+      "id": 4,
+      "name": "Spacial French Fries",
+      "img": "https://i.ibb.co/gwTQj62/fry.png",
+      "details": "Crispy seasoned fries"
+    },
+    {
+      "id": 5,
+      "name": "Cuisine Chicken",
+      "img": "https://i.ibb.co/54QVQnj/chicken.png",
+      "details": "Tender grilled chicken"
+    },
+    {
+      "id": 6,
+      "name": "Japanese Cuisine Chicken",
+      "img": "https://i.ibb.co/54QVQnj/chicken.png",
+      "details": "Japanese-style chicken"
+    }
+   
+    
+  ]
+  
