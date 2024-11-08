@@ -39,22 +39,7 @@ const Navbar = () => {
         }
       });
     };
-
-    const scrollToHome = () => {
-      const homeElement = document.getElementById("home");
-      if (homeElement) {
-        homeElement.scrollIntoView({ behavior: "auto", block: "start" });
-        setActiveLink("home");
-      } else {
-        console.error("Home section not found!"); // Debug log
-      }
-    };
-
-    // Scroll to home section on component mount
-    scrollToHome();
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -69,6 +54,7 @@ const Navbar = () => {
     }
   };
 
+  // Navigation links
   const navLinks = (
     <div className="flex lg:flex-row md:flex-col flex-col gap-6">
       {["home", "about", "portfolio", "clients", "blog", "contact"].map(
@@ -104,10 +90,10 @@ const Navbar = () => {
           </h1>
         </div>
 
-        {/* Navigation Links */}
+        {/* Navigation Links for desktop view */}
         <div className="hidden lg:flex xl:mr-64 lg:mr-36">{navLinks}</div>
 
-        {/* Book a Table Button */}
+        {/* Button for booking a table (desktop only) */}
         <button
           onClick={() => handleScrollTo("booking")}
           className="btn btn-sm text-xs font-bold bg-[#FEBF00] hover:bg-[#FEBF00] uppercase rounded-none border-none ml-4 px-4 py-2 lg:block hidden"
@@ -115,7 +101,7 @@ const Navbar = () => {
           Book a table
         </button>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu Toggle Button */}
         <div className="lg:hidden">
           <button onClick={toggleMenu} className="text-4xl text-white">
             {isOpen ? <RxCross1 /> : <IoMenu />}
@@ -123,7 +109,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Navigation Links for mobile view */}
       {isOpen && (
         <div className="absolute top-20 right-0 w-full bg-gray-800 text-white lg:hidden z-50">
           <div className="flex flex-col p-4 space-y-3">

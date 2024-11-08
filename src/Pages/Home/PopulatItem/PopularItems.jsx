@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/autoplay"; // Import autoplay CSS
-import { Navigation, Autoplay } from "swiper/modules"; // Import Autoplay
+import "swiper/css/autoplay"; 
+import { Navigation, Autoplay } from "swiper/modules"; 
 import PopularItem from "./PopularItem";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import { FaSquareFull } from "react-icons/fa";
@@ -18,10 +18,11 @@ const PopularItems = () => {
   }, []);
 
   return (
-    <div id="portfolio" className="relative mt-24 bg-red-50 xl:px-32 lg:px-20 md:px-0 px-0 py-20 xl:pr-10 lg:pr-4 pr-0">
+    <div id="portfolio" className="relative mt-24 bg-red-50 xl:px-48
+     lg:px-24 md:px-0 px-0 py-24 xl:pr-10 lg:pr-4 pr-0">
       <div>
         <img
-          className="absolute left-0 top-36 h-52 lg:block hidden "
+          className="absolute left-0 top-36 h-56  lg:block hidden "
           src="/images/sideImg.png"
           alt=""
         />
@@ -33,16 +34,16 @@ const PopularItems = () => {
             <FaSquareFull size={9} />
             Crispy, Every Bite Taste
           </p>
-          <h1 className="font-bebas text-3xl sm:text-5xl text-black md:text-start text-center">
+          <h1 className="font-bebas text-3xl sm:text-5xl text-black md:text-start text-center mb-10">
             POPULAR FOOD ITEMS
           </h1>
         </div>
 
-        <div className="flex absolute md:top-28 top-[420px] xl:right-36 lg:right-16 md:right-10 right-1/3 items-center gap-5 ">
-          <button className="custom-prev text-black text-2xl bg-white w-10 h-10 shadow-lg rounded-full flex items-center justify-center leading-none text-center">
+        <div className="flex absolute md:top-28 top-[470px] xl:right-32 lg:right-16 md:right-10 right-1/3 items-center gap-5 ">
+          <button className="custom-prev text-black text-2xl bg-white w-12 h-12 shadow-xl rounded-full flex items-center justify-center leading-none text-center">
             <GrFormPrevious />
           </button>
-          <button className="custom-next text-2xl bg-white w-10 h-10 shadow-lg rounded-full flex items-center justify-center leading-none text-[#BD1F17]">
+          <button className="custom-next text-2xl bg-white w-12 h-12 shadow-lg rounded-full flex items-center justify-center leading-none text-[#BD1F17]">
             <GrFormNext />
           </button>
         </div>
@@ -56,8 +57,8 @@ const PopularItems = () => {
           nextEl: ".custom-next",
         }}
         autoplay={{
-          delay: 3000, // 3 seconds delay
-          disableOnInteraction: false, // Allows autoplay to continue after interactions
+          delay: 3000, 
+          disableOnInteraction: false,
         }}
         breakpoints={{
           640: {

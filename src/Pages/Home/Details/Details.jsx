@@ -10,14 +10,18 @@ const Details = () => {
 
   return (
     <div id="about">
-      <div className="mt-20 px-4 xl:px-28 lg:px-10 flex flex-col md:flex-row justify-center gap-10">
+      <div className="mt-20 px-4 xl:px-48 lg:px-16 flex flex-col md:flex-row justify-center gap-10 ">
         {/* Left Side: Image */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <img src={detailsImg} alt="Details Image" className="w-full h-auto" />
+        <div className="w-full md:w-1/2 flex justify-center ">
+          <img
+            src={detailsImg}
+            alt="Details Image"
+            className="w-full xl:h-[350px] lg:h-[400px] md:h-[360px]"
+          />
         </div>
 
         {/* Right Side: Content */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 h-96">
           <div className="flex flex-wrap items-center gap-2 md:gap-6 border-b border-[#B52B1D]">
             <button
               onClick={() => setTabContent("About")}
@@ -51,10 +55,10 @@ const Details = () => {
           <div>
             {tabContent === "About" && (
               <div>
-                <h1 className="font-bebas text-2xl md:text-4xl mt-6 text-black tracking-normal">
+                <h1 className="font-bebas text-3xl md:text-3xl lg:text-4xl lg:mt-6 md:mt-2 mt-4 text-black tracking-normal">
                   Exceptional culinary experience and delicious food
                 </h1>
-                <p className="text-[#333333] mt-4">
+                <p className="text-[#333333] lg:mt-4 md:mt-2 mt-4">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Ornare non sed est cursus. Vel hac convallis ipsum, facilisi
                   odio pellentesque bibendum viverra tempus. Lorem ipsum dolor
@@ -63,7 +67,7 @@ const Details = () => {
                   exercitation.
                 </p>
                 <div className="flex flex-wrap items-center gap-4 mt-5">
-                  <button className="btn btn-md bg-[#FEBF00] rounded-none uppercase text-black">
+                  <button className="btn lg:btn-md md:btn-sm btn-md bg-[#FEBF00] rounded-none uppercase text-black">
                     About More
                   </button>
                   <h1 className="flex items-center gap-2 text-md text-black font-semibold">
@@ -79,26 +83,45 @@ const Details = () => {
                   Experience
                 </h1>
                 <p className="text-[#333333] mt-4">
-                  Experience details will be added here. This can include work
-                  history, expertise, or key projects.
+                  Our team brings over a decade of experience in top
+                  restaurants, blending traditional techniques with modern
+                  flavors to create memorable dining moments.
                 </p>
+                <ul className="list-disc list-inside mt-4 space-y-2 text-[#333333]">
+                  <li>Worked with award-winning chefs.</li>
+                  <li>Catered high-profile events.</li>
+                  <li>Dedicated to quality and customer satisfaction.</li>
+                </ul>
               </div>
             )}
+
             {tabContent === "Contact" && (
               <div className="mt-6">
                 <h1 className="font-bebas text-2xl md:text-4xl text-black">
                   Contact
                 </h1>
                 <p className="text-[#333333] mt-4">
-                  Reach out to us through the provided phone number or email for
-                  any inquiries. We look forward to connecting with you!
+                  We’d love to hear from you! For inquiries, reservations, or
+                  feedback, feel free to reach out to us via phone or email. Our
+                  support team is available from 9 AM to 9 PM every day to
+                  assist you.
                 </p>
                 <div className="mt-4">
                   <h1 className="flex items-center gap-2 text-md text-black font-semibold">
                     <LuPhoneCall className="text-xl text-[#B52B1D]" /> +88 3426
                     739 485
                   </h1>
+                  <p className="text-[#333333] mt-2">
+                    Email: info@restaurantname.com
+                  </p>
+                  <p className="text-[#333333] mt-2">
+                    Address: 123 Culinary Street, Food City, 98765
+                  </p>
                 </div>
+                <p className="text-[#333333] mt-4">
+                  Follow us on social media for the latest updates and exclusive
+                  offers.
+                </p>
               </div>
             )}
           </div>
@@ -106,7 +129,7 @@ const Details = () => {
       </div>
       {/* badge on image */}
       <div className="relative">
-        <div className="bg-white rounded-lg shadow-md p-4 md:flex hidden items-center justify-center space-x-4 absolute xl:bottom-64 xl:left-40 lg:bottom-48 lg:left-24 md:bottom-72 md:left-14">
+        <div className="bg-white rounded-lg shadow-md p-4 flex items-center justify-center space-x-4 absolute xl:left-52 xl:bottom-64 lg:left-24 lg:bottom-64 md:left-10 md:bottom-60 left-8 bottom-[550px]">
           <div className="relative w-20 h-20">
             <svg className="w-full h-full" viewBox="0 0 36 36">
               {/* Gray background circle */}
@@ -154,12 +177,15 @@ const Details = () => {
         </div>
       </div>
 
-      <div className="relative">  
-       
-        <img className="absolute right-0 -bottom-20 xl:h-64 lg:h-48 lg:block md:hidden hidden" src="/images/details2.png" alt="" />
+      <div className="relative">
+        <img
+          className="absolute right-0 -bottom-20 xl:h-64 lg:h-48 lg:block md:hidden hidden"
+          src="/images/details2.png"
+          alt=""
+        />
       </div>
       {/* 3 badge */}
-      <div className="grid md:grid-cols-3 grid-cols-1 mt-16 md:gap-0 gap-5">
+      <div className="grid md:grid-cols-3 grid-cols-1 mt-16 xl:gap-0 lg:gap-16  gap-5 xl:px-16 lg:px-0 md:mb-0 -mb-10">
         <div className="flex md:justify-center justify-start items-center md:gap-3 gap-10 md:ml-0 ml-8 md:tracking-normal tracking-wider">
           <img
             className="bg-white lg:h-16 lg:w-16 md:h-16 md:w-16 h-20 w-20 md:p-4 p-5 rounded-full shadow-gray-400 shadow-xl"

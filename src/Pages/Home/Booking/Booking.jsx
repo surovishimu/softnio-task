@@ -9,6 +9,7 @@ const Booking = () => {
   const [startDate, setStartDate] = useState(null);
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
   const [totalPeople, setTotalPeople] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   // Function to increment the number of people
   const incrementPeople = () => {
@@ -23,10 +24,39 @@ const Booking = () => {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const date = form.date.value;
+    const people = form.people.value;
+    const details = form.details.value;
+
+    const formData = {
+      name,
+      email,
+      date,
+      people,
+      details,
+    };
+
+    console.log(formData);
+
+    // Show success message
+    setSuccessMessage("Your booking has been successfully submitted!");
+
+    // Reset form fields after submission
+    form.reset();
+    setStartDate(null);
+    setTotalPeople("");
+  };
+
   return (
-    <div id="booking"
-      className="relative bg-cover bg-center flex items-center xl:px-28 lg:px-1"
-      style={{ backgroundImage: `url(${SpoonImg})`,}}
+    <div
+      id="booking"
+      className="relative bg-cover bg-center flex items-center xl:px-32 lg:px-10 lg:ml-0 md:-ml-5 ml-0"
+      style={{ backgroundImage: `url(${SpoonImg})` }}
     >
       <div className="absolute inset-0 bg-black opacity-40" />
 
@@ -45,24 +75,30 @@ const Booking = () => {
           </p>
         </div>
 
-        <form className="grid grid-cols-2 gap-6 mb-4">
+        <form
+          onSubmit={handleSubmit}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4"
+        >
           <input
             type="text"
+            name="name"
             placeholder="Your Name*"
-            className="border border-white bg-transparent text-white placeholder-white p-2 w-full"
-            required
+            className="border border-white bg-transparent text-white placeholder-white p-2 w-full outline-none focus:outline-none focus:ring-0"
           />
           <input
             type="email"
+            name="email"
             placeholder="Your Email*"
-            className="border border-white bg-transparent text-white placeholder-white p-2 w-full"
-            required
+            className="border border-white bg-transparent text-white placeholder-white p-2 w-full outline-none focus:outline-none focus:ring-0"
           />
-          <div className="relative">
+
+          <div className="relative ">
             <DatePicker
+              name="date"
+              wrapperClassName="w-full"
               selected={startDate}
               onChange={(date) => setStartDate(date)}
-              className="border border-white text-white bg-transparent placeholder-white p-2 pr-24 w-full"
+              className="border border-white text-white bg-transparent placeholder-white p-2 w-full"
               placeholderText="Reservation Date"
               dateFormat="yyyy-MM-dd"
               showPopperArrow={false}
@@ -71,17 +107,19 @@ const Booking = () => {
               onCalendarClose={() => setIsDatePickerOpen(false)}
             />
             <FaCalendarAlt
-              className="absolute right-2 top-3 text-white cursor-pointer"
+              className="absolute right-2 top-2 text-white cursor-pointer"
               onClick={() => setIsDatePickerOpen(!isDatePickerOpen)}
             />
           </div>
 
-          <div className="relative">
+          <div className="relative w-full">
             <input
+              name="people"
+              placeholder="Total People"
               type="text"
               value={totalPeople}
               readOnly
-              className="border border-white bg-transparent text-white placeholder-white p-2 text-center w-full"
+              className="border border-white bg-transparent text-white placeholder-white p-2 placeholder:text-start text-center w-full "
               required
             />
             <div className="absolute right-2 top-1 text-white flex flex-col">
@@ -103,15 +141,21 @@ const Booking = () => {
           </div>
 
           <textarea
+            name="details"
             placeholder="Message"
-            className="col-span-2 border border-white bg-transparent text-white placeholder-white p-2 w-full"
+            className="col-span-1 md:col-span-2 border border-white bg-transparent text-white placeholder-white p-2 w-full"
             rows={4}
           />
+          <button className="bg-[#FEBF00] text-black py-2 px-4 rounded-none w-1/2">
+            Book Now
+          </button>
         </form>
 
-        <button className="bg-[#FEBF00] text-black py-2 px-4 rounded-none">
-          Book Now
-        </button>
+        <div className="absolute md:bottom-[70px] bottom-2 left-5 md:left-1/3">
+          {successMessage && (
+            <p className=" text-emerald-700">{successMessage}</p>
+          )}
+        </div>
       </div>
     </div>
   );
