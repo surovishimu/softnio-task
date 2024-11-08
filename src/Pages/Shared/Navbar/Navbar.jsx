@@ -75,13 +75,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex items-center justify-between pt-8 pb-4 px-6 lg:px-14 md:px-10 z-[60] transition-colors duration-400 ${
+      className={`fixed top-0 left-0 w-full flex items-center justify-between pt-8 pb-4 px-6 xl:px-40 lg:px-14  md:px-10 z-[60] transition-colors duration-400 ${
         isScrolled
           ? "bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 opacity-90 sticky"
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center w-full max-w-screen-xl">
+      <div className="container mx-auto flex justify-between items-center w-full max-w-screen-xl ">
         {/* Logo and Title */}
         <div className="flex justify-start items-center gap-1">
           <img className="lg:w-9 w-12" src={logo} alt="logo" />
@@ -91,18 +91,18 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links for desktop view */}
-        <div className="hidden lg:flex xl:mr-64 lg:mr-36">{navLinks}</div>
+        <div className="hidden lg:flex xl:mr-56 lg:mr-28 ">{navLinks}</div>
 
         {/* Button for booking a table (desktop only) */}
         <button
           onClick={() => handleScrollTo("booking")}
-          className="btn btn-sm text-xs font-bold bg-[#FEBF00] hover:bg-[#FEBF00] uppercase rounded-none border-none ml-4 px-4 py-2 lg:block hidden"
+          className="btn btn-sm text-xs font-bold bg-[#FEBF00] hover:bg-[#FEBF00] uppercase rounded-none border-none ml-4 px-4 py-2 lg:block hidden "
         >
           Book a table
         </button>
 
         {/* Mobile Menu Toggle Button */}
-        <div className="lg:hidden">
+        <div className="lg:hidden -mr-3">
           <button onClick={toggleMenu} className="text-4xl text-white">
             {isOpen ? <RxCross1 /> : <IoMenu />}
           </button>
@@ -116,7 +116,7 @@ const Navbar = () => {
             {navLinks}
             <button
               onClick={() => handleScrollTo("booking")}
-              className="btn lg:btn-md md:btn-md text-xs font-bold bg-[#FEBF00] hover:bg-[#FEBF00] uppercase rounded-none border-none md:px-4 px-0 md:py-2 py-0 w-full outline-none"
+              className="btn lg:btn-md md:btn-md text-xs font-bold bg-[#FEBF00] hover:bg-[#FEBF00] uppercase rounded-none border-none md:px-4 px-0 md:py-2 py-0 w-full outline-none "
             >
               Book a table
             </button>

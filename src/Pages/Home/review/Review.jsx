@@ -44,7 +44,7 @@ const Review = () => {
   return (
     <div
       id="clients"
-      className="relative bg-red-50 px-6 md:px-8 lg:px-20 xl:px-36 pt-20 md:pt-20 lg:pt-32 pb-32 md:pb-36 lg:pb-32"
+      className="relative bg-red-50 pl-6 pr-6 md:pl-8  md:pr-8 lg:pl-20 lg:pr-28 xl:pl-48 xl:pr-36 pt-20 md:pt-20 lg:pt-32 pb-32 md:pb-36 lg:pb-32"
     >
       {/* Title Section */}
       <div className="mb-10 text-left">

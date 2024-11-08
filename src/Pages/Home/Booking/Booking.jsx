@@ -55,7 +55,7 @@ const Booking = () => {
   return (
     <div
       id="booking"
-      className="relative bg-cover bg-center flex items-center xl:px-32 lg:px-10 lg:ml-0 md:-ml-5 ml-0"
+      className="relative bg-cover bg-center flex items-center xl:px-36 lg:px-10  lg:ml-0 md:-ml-5 ml-0"
       style={{ backgroundImage: `url(${SpoonImg})` }}
     >
       <div className="absolute inset-0 bg-black opacity-40" />
