@@ -118,10 +118,7 @@ const Details = () => {
                     Address: 123 Culinary Street, Food City, 98765
                   </p>
                 </div>
-                <p className="text-[#333333] mt-4">
-                  Follow us on social media for the latest updates and exclusive
-                  offers.
-                </p>
+                
               </div>
             )}
           </div>

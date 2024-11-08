@@ -75,7 +75,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex items-center justify-between py-4 px-6 lg:px-14 md:px-10 z-[60] transition-colors duration-400 ${
+      className={`fixed top-0 left-0 w-full flex items-center justify-between pt-8 pb-4 px-6 lg:px-14 md:px-10 z-[60] transition-colors duration-400 ${
         isScrolled
           ? "bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 opacity-90 sticky"
           : "bg-transparent"
